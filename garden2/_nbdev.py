@@ -7,7 +7,6 @@ index = {"unpack_int64_list": "01_utils.ipynb",
          "unpack_sample": "01_utils.ipynb",
          "Reader": "01_utils.ipynb",
          "compression_code": "01_utils.ipynb",
-         "root": "02_data.ipynb",
          "path": "02_data.ipynb",
          "path_img": "02_data.ipynb",
          "train_fnames": "02_data.ipynb",
@@ -15,11 +14,18 @@ index = {"unpack_int64_list": "01_utils.ipynb",
          "get_items": "02_data.ipynb",
          "data": "02_data.ipynb",
          "get_x": "02_data.ipynb",
-         "get_y": "02_data.ipynb"}
+         "get_y": "02_data.ipynb",
+         "splitter": "03_model.ipynb",
+         "block": "03_model.ipynb",
+         "dls": "03_model.ipynb",
+         "net1": "03_model.ipynb",
+         "learn1": "04_train.ipynb"}
 
 modules = ["utils.py",
            "data.py",
-           "model.py"]
+           "model.py",
+           "train.py",
+           "validate.py"]
 
 doc_url = "https://fastai.github.io/garden2/"
 

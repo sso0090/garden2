@@ -39,7 +39,7 @@ description: "API details."
 <span class="kn">from</span> <span class="nn">nbdev.export2html</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="kn">from</span> <span class="nn">nbdev.cli</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="n">notebook2script</span><span class="p">()</span>
-<span class="n">nbdev_build_docs</span><span class="p">(</span><span class="n">n_workers</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="c1">#nbdev_build_docs(n_workers=0)</span>
 </pre></div>
 
     </div>
@@ -56,116 +56,10 @@ description: "API details."
 Converted 01_utils.ipynb.
 Converted 02_data.ipynb.
 Converted 03_model.ipynb.
+Converted 04_train.ipynb.
+Converted 05_validate.ipynb.
 Converted index.ipynb.
-converting: D:\codes\my_dev\garden2\00_core.ipynb
-converting: D:\codes\my_dev\garden2\02_data.ipynb
-An error occurred while executing the following cell:
-------------------
-#export
-from nbdev.showdoc import show_doc
-from garden2.data import *
-------------------
-
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-1-f8cc26d6b789&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">      1</span> <span class="ansi-red-intense-fg ansi-bold">#export</span>
-<span class="ansi-green-fg">      2</span> <span class="ansi-green-intense-fg ansi-bold">from</span> nbdev<span class="ansi-yellow-intense-fg ansi-bold">.</span>showdoc <span class="ansi-green-intense-fg ansi-bold">import</span> show_doc
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 3</span><span class="ansi-yellow-intense-fg ansi-bold"> </span><span class="ansi-green-intense-fg ansi-bold">from</span> garden2<span class="ansi-yellow-intense-fg ansi-bold">.</span>data <span class="ansi-green-intense-fg ansi-bold">import</span> <span class="ansi-yellow-intense-fg ansi-bold">*</span>
-
-<span class="ansi-green-intense-fg ansi-bold">D:\codes\my_dev\garden2\garden2\data.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">     26</span> data <span class="ansi-yellow-intense-fg ansi-bold">=</span> <span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-yellow-intense-fg ansi-bold">]</span>
-<span class="ansi-green-fg">     27</span> <span class="ansi-green-intense-fg ansi-bold">for</span> name <span class="ansi-green-intense-fg ansi-bold">in</span> train_fnames<span class="ansi-yellow-intense-fg ansi-bold">+</span>test_fnames<span class="ansi-yellow-intense-fg ansi-bold">:</span>
-<span class="ansi-green-intense-fg ansi-bold">---&gt; 28</span><span class="ansi-yellow-intense-fg ansi-bold">   </span>r <span class="ansi-yellow-intense-fg ansi-bold">=</span> Reader<span class="ansi-yellow-intense-fg ansi-bold">(</span>str<span class="ansi-yellow-intense-fg ansi-bold">(</span>name<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> unpack_sample<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">     29</span>   <span class="ansi-green-intense-fg ansi-bold">for</span> sample <span class="ansi-green-intense-fg ansi-bold">in</span> r<span class="ansi-yellow-intense-fg ansi-bold">:</span>
-<span class="ansi-green-fg">     30</span>     data<span class="ansi-yellow-intense-fg ansi-bold">.</span>append<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">[</span>sample<span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-blue-intense-fg ansi-bold">&#39;image&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">]</span><span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-cyan-intense-fg ansi-bold">0</span><span class="ansi-yellow-intense-fg ansi-bold">]</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> sample<span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-blue-intense-fg ansi-bold">&#39;class&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">]</span><span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-cyan-intense-fg ansi-bold">0</span><span class="ansi-yellow-intense-fg ansi-bold">]</span><span class="ansi-yellow-intense-fg ansi-bold">]</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
-
-<span class="ansi-green-intense-fg ansi-bold">D:\codes\my_dev\garden2\garden2\utils.py</span> in <span class="ansi-cyan-fg">__init__</span><span class="ansi-blue-intense-fg ansi-bold">(self, fname, unpack_sample, compression)</span>
-<span class="ansi-green-fg">     21</span> <span class="ansi-green-intense-fg ansi-bold">class</span> Reader<span class="ansi-yellow-intense-fg ansi-bold">:</span>
-<span class="ansi-green-fg">     22</span>     <span class="ansi-green-intense-fg ansi-bold">def</span> __init__<span class="ansi-yellow-intense-fg ansi-bold">(</span>self<span class="ansi-yellow-intense-fg ansi-bold">,</span> fname<span class="ansi-yellow-intense-fg ansi-bold">,</span> unpack_sample<span class="ansi-yellow-intense-fg ansi-bold">,</span> compression<span class="ansi-yellow-intense-fg ansi-bold">=</span><span class="ansi-green-intense-fg ansi-bold">None</span><span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
-<span class="ansi-green-intense-fg ansi-bold">---&gt; 23</span><span class="ansi-yellow-intense-fg ansi-bold">         self._engine = iter(tf.compat.v1.io.tf_record_iterator(
-</span><span class="ansi-green-fg">     24</span>             fname, compression_code(compression)))
-<span class="ansi-green-fg">     25</span>         self<span class="ansi-yellow-intense-fg ansi-bold">.</span>_unpack_sample <span class="ansi-yellow-intense-fg ansi-bold">=</span> unpack_sample
-
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>: name &#39;tf&#39; is not defined
-NameError: name &#39;tf&#39; is not defined
-
-converting: D:\codes\my_dev\garden2\03_model.ipynb
-An error occurred while executing the following cell:
-------------------
-#export
-from nbdev.showdoc import show_doc
-from garden2.model import *
-------------------
-
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-1-b9f9dedb1a77&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">      1</span> <span class="ansi-red-intense-fg ansi-bold">#export</span>
-<span class="ansi-green-fg">      2</span> <span class="ansi-green-intense-fg ansi-bold">from</span> nbdev<span class="ansi-yellow-intense-fg ansi-bold">.</span>showdoc <span class="ansi-green-intense-fg ansi-bold">import</span> show_doc
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 3</span><span class="ansi-yellow-intense-fg ansi-bold"> </span><span class="ansi-green-intense-fg ansi-bold">from</span> garden2<span class="ansi-yellow-intense-fg ansi-bold">.</span>model <span class="ansi-green-intense-fg ansi-bold">import</span> <span class="ansi-yellow-intense-fg ansi-bold">*</span>
-
-<span class="ansi-green-intense-fg ansi-bold">D:\codes\my_dev\garden2\garden2\model.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">      6</span> <span class="ansi-green-intense-fg ansi-bold">from</span> fastai2<span class="ansi-yellow-intense-fg ansi-bold">.</span>vision<span class="ansi-yellow-intense-fg ansi-bold">.</span>all <span class="ansi-green-intense-fg ansi-bold">import</span> <span class="ansi-yellow-intense-fg ansi-bold">*</span>
-<span class="ansi-green-fg">      7</span> <span class="ansi-green-intense-fg ansi-bold">from</span> <span class="ansi-yellow-intense-fg ansi-bold">.</span>utils <span class="ansi-green-intense-fg ansi-bold">import</span> <span class="ansi-yellow-intense-fg ansi-bold">*</span>
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 8</span><span class="ansi-yellow-intense-fg ansi-bold"> </span><span class="ansi-green-intense-fg ansi-bold">from</span> <span class="ansi-yellow-intense-fg ansi-bold">.</span>data <span class="ansi-green-intense-fg ansi-bold">import</span> <span class="ansi-yellow-intense-fg ansi-bold">*</span>
-
-<span class="ansi-green-intense-fg ansi-bold">D:\codes\my_dev\garden2\garden2\data.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">     26</span> data <span class="ansi-yellow-intense-fg ansi-bold">=</span> <span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-yellow-intense-fg ansi-bold">]</span>
-<span class="ansi-green-fg">     27</span> <span class="ansi-green-intense-fg ansi-bold">for</span> name <span class="ansi-green-intense-fg ansi-bold">in</span> train_fnames<span class="ansi-yellow-intense-fg ansi-bold">+</span>test_fnames<span class="ansi-yellow-intense-fg ansi-bold">:</span>
-<span class="ansi-green-intense-fg ansi-bold">---&gt; 28</span><span class="ansi-yellow-intense-fg ansi-bold">   </span>r <span class="ansi-yellow-intense-fg ansi-bold">=</span> Reader<span class="ansi-yellow-intense-fg ansi-bold">(</span>str<span class="ansi-yellow-intense-fg ansi-bold">(</span>name<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> unpack_sample<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">     29</span>   <span class="ansi-green-intense-fg ansi-bold">for</span> sample <span class="ansi-green-intense-fg ansi-bold">in</span> r<span class="ansi-yellow-intense-fg ansi-bold">:</span>
-<span class="ansi-green-fg">     30</span>     data<span class="ansi-yellow-intense-fg ansi-bold">.</span>append<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">[</span>sample<span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-blue-intense-fg ansi-bold">&#39;image&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">]</span><span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-cyan-intense-fg ansi-bold">0</span><span class="ansi-yellow-intense-fg ansi-bold">]</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> sample<span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-blue-intense-fg ansi-bold">&#39;class&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">]</span><span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-cyan-intense-fg ansi-bold">0</span><span class="ansi-yellow-intense-fg ansi-bold">]</span><span class="ansi-yellow-intense-fg ansi-bold">]</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
-
-<span class="ansi-green-intense-fg ansi-bold">D:\codes\my_dev\garden2\garden2\utils.py</span> in <span class="ansi-cyan-fg">__init__</span><span class="ansi-blue-intense-fg ansi-bold">(self, fname, unpack_sample, compression)</span>
-<span class="ansi-green-fg">     21</span> <span class="ansi-green-intense-fg ansi-bold">class</span> Reader<span class="ansi-yellow-intense-fg ansi-bold">:</span>
-<span class="ansi-green-fg">     22</span>     <span class="ansi-green-intense-fg ansi-bold">def</span> __init__<span class="ansi-yellow-intense-fg ansi-bold">(</span>self<span class="ansi-yellow-intense-fg ansi-bold">,</span> fname<span class="ansi-yellow-intense-fg ansi-bold">,</span> unpack_sample<span class="ansi-yellow-intense-fg ansi-bold">,</span> compression<span class="ansi-yellow-intense-fg ansi-bold">=</span><span class="ansi-green-intense-fg ansi-bold">None</span><span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
-<span class="ansi-green-intense-fg ansi-bold">---&gt; 23</span><span class="ansi-yellow-intense-fg ansi-bold">         self._engine = iter(tf.compat.v1.io.tf_record_iterator(
-</span><span class="ansi-green-fg">     24</span>             fname, compression_code(compression)))
-<span class="ansi-green-fg">     25</span>         self<span class="ansi-yellow-intense-fg ansi-bold">.</span>_unpack_sample <span class="ansi-yellow-intense-fg ansi-bold">=</span> unpack_sample
-
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>: name &#39;tf&#39; is not defined
-NameError: name &#39;tf&#39; is not defined
-
 </pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">Exception</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-7-03c0efbe4672&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">      4</span> <span class="ansi-green-intense-fg ansi-bold">from</span> nbdev<span class="ansi-yellow-intense-fg ansi-bold">.</span>cli <span class="ansi-green-intense-fg ansi-bold">import</span> <span class="ansi-yellow-intense-fg ansi-bold">*</span>
-<span class="ansi-green-fg">      5</span> notebook2script<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 6</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>nbdev_build_docs<span class="ansi-yellow-intense-fg ansi-bold">(</span>n_workers<span class="ansi-yellow-intense-fg ansi-bold">=</span><span class="ansi-cyan-intense-fg ansi-bold">0</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
-
-<span class="ansi-green-intense-fg ansi-bold">d:\codes\fastai_dev\fastscript\fastscript\core.py</span> in <span class="ansi-cyan-fg">_f</span><span class="ansi-blue-intense-fg ansi-bold">(*args, **kwargs)</span>
-<span class="ansi-green-fg">     65</span>     <span class="ansi-green-intense-fg ansi-bold">def</span> _f<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">*</span>args<span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-yellow-intense-fg ansi-bold">**</span>kwargs<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
-<span class="ansi-green-fg">     66</span>         mod <span class="ansi-yellow-intense-fg ansi-bold">=</span> inspect<span class="ansi-yellow-intense-fg ansi-bold">.</span>getmodule<span class="ansi-yellow-intense-fg ansi-bold">(</span>inspect<span class="ansi-yellow-intense-fg ansi-bold">.</span>currentframe<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">.</span>f_back<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-intense-fg ansi-bold">---&gt; 67</span><span class="ansi-yellow-intense-fg ansi-bold">         </span><span class="ansi-green-intense-fg ansi-bold">if</span> <span class="ansi-green-intense-fg ansi-bold">not</span> mod<span class="ansi-yellow-intense-fg ansi-bold">:</span> <span class="ansi-green-intense-fg ansi-bold">return</span> func<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">*</span>args<span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-yellow-intense-fg ansi-bold">**</span>kwargs<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">     68</span> 
-<span class="ansi-green-fg">     69</span>         p <span class="ansi-yellow-intense-fg ansi-bold">=</span> anno_parser<span class="ansi-yellow-intense-fg ansi-bold">(</span>func<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-
-<span class="ansi-green-intense-fg ansi-bold">d:\codes\fastai_dev\nbdev\nbdev\cli.py</span> in <span class="ansi-cyan-fg">nbdev_build_docs</span><span class="ansi-blue-intense-fg ansi-bold">(fname, force_all, mk_readme, n_workers)</span>
-<span class="ansi-green-fg">     99</span>                      n_workers:Param(&#34;Number of workers to use&#34;, int)=None):
-<span class="ansi-green-fg">    100</span>     <span class="ansi-blue-intense-fg ansi-bold">&#34;Build the documentation by converting notebooks mathing `fname` to html&#34;</span>
-<span class="ansi-green-intense-fg ansi-bold">--&gt; 101</span><span class="ansi-yellow-intense-fg ansi-bold">     </span>notebook2html<span class="ansi-yellow-intense-fg ansi-bold">(</span>fname<span class="ansi-yellow-intense-fg ansi-bold">=</span>fname<span class="ansi-yellow-intense-fg ansi-bold">,</span> force_all<span class="ansi-yellow-intense-fg ansi-bold">=</span>force_all<span class="ansi-yellow-intense-fg ansi-bold">,</span> n_workers<span class="ansi-yellow-intense-fg ansi-bold">=</span>n_workers<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">    102</span>     <span class="ansi-green-intense-fg ansi-bold">if</span> fname <span class="ansi-green-intense-fg ansi-bold">is</span> <span class="ansi-green-intense-fg ansi-bold">None</span><span class="ansi-yellow-intense-fg ansi-bold">:</span> make_sidebar<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">    103</span>     <span class="ansi-green-intense-fg ansi-bold">if</span> mk_readme<span class="ansi-yellow-intense-fg ansi-bold">:</span> make_readme<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
-
-<span class="ansi-green-intense-fg ansi-bold">d:\codes\fastai_dev\nbdev\nbdev\export2html.py</span> in <span class="ansi-cyan-fg">notebook2html</span><span class="ansi-blue-intense-fg ansi-bold">(fname, force_all, n_workers, cls, template_file, exporter, dest)</span>
-<span class="ansi-green-fg">    448</span>         <span class="ansi-green-intense-fg ansi-bold">if</span> <span class="ansi-green-intense-fg ansi-bold">not</span> all<span class="ansi-yellow-intense-fg ansi-bold">(</span>passed<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
-<span class="ansi-green-fg">    449</span>             msg <span class="ansi-yellow-intense-fg ansi-bold">=</span> <span class="ansi-blue-intense-fg ansi-bold">&#34;Conversion failed on the following:\n&#34;</span>
-<span class="ansi-green-intense-fg ansi-bold">--&gt; 450</span><span class="ansi-yellow-intense-fg ansi-bold">             </span><span class="ansi-green-intense-fg ansi-bold">raise</span> Exception<span class="ansi-yellow-intense-fg ansi-bold">(</span>msg <span class="ansi-yellow-intense-fg ansi-bold">+</span> <span class="ansi-blue-intense-fg ansi-bold">&#39;\n&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">.</span>join<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">[</span>f<span class="ansi-yellow-intense-fg ansi-bold">.</span>name <span class="ansi-green-intense-fg ansi-bold">for</span> p<span class="ansi-yellow-intense-fg ansi-bold">,</span>f <span class="ansi-green-intense-fg ansi-bold">in</span> zip<span class="ansi-yellow-intense-fg ansi-bold">(</span>passed<span class="ansi-yellow-intense-fg ansi-bold">,</span>files<span class="ansi-yellow-intense-fg ansi-bold">)</span> <span class="ansi-green-intense-fg ansi-bold">if</span> <span class="ansi-green-intense-fg ansi-bold">not</span> p<span class="ansi-yellow-intense-fg ansi-bold">]</span><span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">    451</span> 
-<span class="ansi-green-fg">    452</span> <span class="ansi-red-intense-fg ansi-bold"># Cell</span>
-
-<span class="ansi-red-intense-fg ansi-bold">Exception</span>: Conversion failed on the following:
-02_data.ipynb
-03_model.ipynb</pre>
 </div>
 </div>
 
