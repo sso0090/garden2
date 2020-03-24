@@ -2,7 +2,8 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {"unpack_int64_list": "01_utils.ipynb",
+index = {"root": "01_utils.ipynb",
+         "unpack_int64_list": "01_utils.ipynb",
          "unpack_bytes_list": "01_utils.ipynb",
          "unpack_sample": "01_utils.ipynb",
          "Reader": "01_utils.ipynb",
